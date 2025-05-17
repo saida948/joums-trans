@@ -1,40 +1,105 @@
 .infos {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    padding: 2rem;
-    background-color: #f8f8f8;
+    padding: 3rem 2rem;
+    background-color: #f9f9f9;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.infos-card {
-    width: 300px;
+.info-card {
+    width: 320px;
     text-align: center;
-    margin: 1rem;
-    padding: 1.5rem;
+    padding: 2rem;
     background: white;
-    border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.infos-card:hover {
-    transform: translateY(-5px);
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
-.infos-card img {
-    width: 60px;
-    height: 60px;
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #eb9090, #f8c1c1);
+    transition: width 0.3s ease;
+}
+
+.info-card:hover::before {
+    width: 10px;
+}
+
+.info-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 3px solid #eb9090;
+    padding: 3px;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.info-card h3 {
     margin-bottom: 1rem;
-}
-
-.infos-card h3 {
-    margin-bottom: 0.5rem;
     color: #333;
+    font-size: 1.4rem;
+    position: relative;
+    display: inline-block;
 }
 
-.infos-card p {
-    color: #555;
-    font-size: 0.95rem;
+.info-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #eb9090;
+    transition: width 0.3s ease;
+}
+
+.info-card:hover h3::after {
+    width: 80%;
+}
+
+.info-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 1080px) {
+    .infos {
+        justify-content: center;
+    }
+    
+    .info-card {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        width: 100%;
+        max-width: 320px;
+    }
 }

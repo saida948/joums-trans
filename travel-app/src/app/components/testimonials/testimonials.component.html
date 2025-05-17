@@ -1,9 +1,38 @@
 <section class="testimonials">
-    <h2>Avis aux voyageurs</h2>
-    <div class="testimonial-card">
-        <div class="testimonial-card" *ngFor="let avis of temoignages">
-            <p>"{{ avis.commentaire }}"</p>
-            <h4>- {{ avis.nom }}</h4>
+    <h2 class="section-title">Avis aux voyageurs</h2>
+    
+    <div class="testimonials-slider">
+        <div class="testimonial-card" *ngFor="let avis of temoignages; let i = index" 
+             [class.active]="currentIndex === i"
+             [@testimonialAnimation]="currentIndex === i ? 'active' : 'inactive'">
+            <div class="quote-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#4a6fa5">
+                    <path d="M13,14.725c0-5.141,3.892-10.519,10-11.725l0.984,2.126c-2.215,0.835-4.163,3.742-4.38,5.746c2.491,0.392,4.396,2.547,4.396,5.149c0,3.182-2.584,4.979-5.199,4.979-3.015,0-5.801-2.305-5.801-6.275zm-13,0c0-5.141,3.892-10.519,10-11.725l0.984,2.126c-2.215,0.835-4.163,3.742-4.38,5.746c2.491,0.392,4.396,2.547,4.396,5.149c0,3.182-2.584,4.979-5.199,4.979-3.015,0-5.801-2.305-5.801-6.275z"/>
+                </svg>
+            </div>
+            <p class="testimonial-text">"{{ avis.commentaire }}"</p>
+            <div class="testimonial-author">
+                <h4>{{ avis.nom }}</h4>
+            </div>
         </div>
+    </div>
+    
+    <div class="testimonial-controls">
+        <button class="control-button prev" (click)="prevTestimonial()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#333">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <div class="testimonial-dots">
+            <span *ngFor="let avis of temoignages; let i = index" 
+                  class="dot" 
+                  [class.active]="currentIndex === i"
+                  (click)="setTestimonial(i)"></span>
+        </div>
+        <button class="control-button next" (click)="nextTestimonial()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#333">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
     </div>
 </section>
