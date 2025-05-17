@@ -7,9 +7,15 @@
 <app-promos></app-promos>
 
 <app-testimonials></app-testimonials>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-    <app-destination-card *ngFor="let dest of destinations" [destination]="dest">
+
+<section class="featured-destinations">
+    <div class="container">
+        <h2 class="section-title">Découvrez nos destinations</h2>
+        <p class="section-subtitle">Explorez les plus beaux sites touristiques du Gabon</p>
         
-    </app-destination-card>
-</div>
+        <div class="destinations-grid">
+            <app-destination-card *ngFor="let dest of destinations" [destination]="dest"></app-destination-card>
+        </div>
+    </div>
+</section>
 

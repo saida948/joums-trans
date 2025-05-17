@@ -8,6 +8,7 @@ import { DestinationDetailComponent } from './pages/destination-detail/destinati
 import { BookingComponent } from './pages/booking/booking.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { HomeDemo } from './components/home-demo/home-demo.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ export const routes: Routes = [
     { path: 'booking',  component: BookingComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
+    { path: 'demo', component: HomeDemo },
     { path: '**', redirectTo: '' }
 ];
 

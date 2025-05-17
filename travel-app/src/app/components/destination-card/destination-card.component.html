@@ -1,10 +1,19 @@
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>{{ destination.nom }}</mat-card-title>
-        <mat-card-subtitle>{{ destination.description }}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image [src]="destination.imageUrl" alt="{{ destination.nom }}">
-    <mat-card-content>
-        <p>En savoir plus sur {{ destination.nom }}</p>
-    </mat-card-content>
-</mat-card>
+<div class="destination-card">
+    <div class="destination-image">
+        <img [src]="destination.imageUrl" alt="{{ destination.nom }}">
+        <div class="destination-overlay">
+            <span class="location-tag">{{ destination.nom }}</span>
+        </div>
+    </div>
+    <div class="destination-content">
+        <h3 class="destination-title">{{ destination.nom }}</h3>
+        <p class="destination-description">{{ destination.description }}</p>
+        <button class="destination-button">
+            <span>Découvrir</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </button>
+    </div>
+</div>

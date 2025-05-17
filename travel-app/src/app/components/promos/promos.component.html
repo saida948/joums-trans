@@ -1,11 +1,13 @@
 <section class="promos">
-    <h2>Offres promotionnelles</h2>
-    <div class="promo-cards">
+    <h2 class="section-title">Offres promotionnelles</h2>
+    <div class="promo-container">
         <div class="promo-card" *ngFor="let promo of promotions">
-            <h3>{{ promo.titre }}</h3>
-            <p>{{ promo.description }}</p>
-            <span>{{ promo.reduction }}</span>
+            <div class="promo-badge">{{ promo.reduction }}</div>
+            <div class="promo-content">
+                <h3 class="promo-title">{{ promo.titre }}</h3>
+                <p class="promo-description">{{ promo.description }}</p>
+                <button class="promo-button">Réserver</button>
+            </div>
         </div>
     </div>
-
 </section>
