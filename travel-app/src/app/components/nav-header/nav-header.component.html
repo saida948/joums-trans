@@ -1,0 +1,19 @@
+<ul class="mx-auto flex gap-3 w-fit rounded-full border-2 border-black p-1 relative"
+    (mouseleave)="onNavMouseLeave()">
+    
+    <li *ngFor="let link of navLinks; let i = index"
+        #tabRef
+        class="relative z-10 block cursor-pointer px-3 py-1 text-xs md:px-5 md:py-2 md:text-base"
+        (mouseenter)="onTabMouseEnter(i)">
+        <a [routerLink]="link.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: link.route === '/'}">
+            {{ link.name }}
+        </a>
+    </li>
+
+    <!-- Animated Cursor -->
+    <li class="absolute z-0 h-7 rounded-full bg-black md:h-10"
+        [style.opacity]="position.opacity"
+        [style.width.px]="position.width"
+        [style.left.px]="position.left">
+    </li>
+</ul> 
