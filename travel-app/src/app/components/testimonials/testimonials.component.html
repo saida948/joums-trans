@@ -1,0 +1,9 @@
+<section class="testimonials">
+    <h2>Avis aux voyageurs</h2>
+    <div class="testimonial-card">
+        <div class="testimonial-card" *ngFor="let avis of temoignages">
+            <p>"{{ avis.commentaire }}"</p>
+            <h4>- {{ avis.nom }}</h4>
+        </div>
+    </div>
+</section>

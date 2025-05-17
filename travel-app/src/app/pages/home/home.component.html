@@ -1,0 +1,15 @@
+<app-hero></app-hero>
+
+<app-infos></app-infos>
+
+<app-destinations></app-destinations>
+
+<app-promos></app-promos>
+
+<app-testimonials></app-testimonials>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <app-destination-card *ngFor="let dest of destinations" [destination]="dest">
+        
+    </app-destination-card>
+</div>
+

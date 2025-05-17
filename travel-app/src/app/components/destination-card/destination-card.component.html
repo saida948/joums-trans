@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ destination.nom }}</mat-card-title>
+        <mat-card-subtitle>{{ destination.description }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="destination.imageUrl" alt="{{ destination.nom }}">
+    <mat-card-content>
+        <p>En savoir plus sur {{ destination.nom }}</p>
+    </mat-card-content>
+</mat-card>

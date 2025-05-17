@@ -1,0 +1,38 @@
+.promo {
+    padding: 2rem;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.promo h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.promo-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.promo-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.promo-card{
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.promo-card span {
+    display: block;
+    margin-top: 0.5rem;
+    color: #e74c3c;
+    font-weight: bold;
+}

@@ -1,0 +1,35 @@
+.hero {
+    background: url('/joums-trans/travel-app/src/assets/images/accueil.jpeg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: antiquewhite;
+    text-align: center;
+}
+.hero .hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+
+.hero .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+.hero .hero-content p {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+.hero .hero-content button {
+        background-color: #ff9800;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        color: white;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+    }
+}
